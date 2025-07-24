@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class HeroSection extends StatelessWidget {
   final VoidCallback scrollToProjects;
 
-  // Construtor agora espera scrollToProjects
   const HeroSection({super.key, required this.scrollToProjects});
 
   @override
@@ -24,20 +23,22 @@ class HeroSection extends StatelessWidget {
             backgroundColor: Colors.white,
           ),
           const SizedBox(height: 20),
+          // Tamanho da fonte responsivo para o nome
           Text(
-            'Olá, eu sou Moisés!', // Nome atualizado
+            'Olá, eu sou Moisés!',
             style: TextStyle(
-              fontSize: screenSize.width > 600 ? 48 : 32,
+              fontSize: screenSize.width > 600 ? 48 : 32, // Maior em desktop, menor em mobile
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 10),
+          // Tamanho da fonte responsivo para o título
           Text(
-            'Engenheiro da Computação | Especialista em Desenvolvedor de Software', // Título atualizado
+            'Engenheiro da Computação | Especialista em Desenvolvedor de Software',
             style: TextStyle(
-              fontSize: screenSize.width > 600 ? 24 : 18,
+              fontSize: screenSize.width > 600 ? 24 : 18, // Maior em desktop, menor em mobile
               color: Colors.white70,
             ),
             textAlign: TextAlign.center,

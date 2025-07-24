@@ -30,6 +30,18 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
+    
+    // Altura da imagem responsiva
+    double imageHeight = 250; // Altura padrão
+    if (screenSize.width < 400) { // Para telas menores (celulares)
+      imageHeight = 60;
+    } else if (screenSize.width > 400) { // Para telas médias (tablets)
+      imageHeight = 250;
+    } else { // Para telas maiores (desktop)
+      imageHeight = 200;
+    }
+
     return Card(
       elevation: 5,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -40,12 +52,12 @@ class ProjectCard extends StatelessWidget {
             borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
             child: Image.asset(
               imageUrl,
-              height: 150,
+              height: imageHeight, // Altura responsiva
               width: double.infinity,
-              fit: BoxFit.cover,
+              fit: BoxFit.fitWidth, // Usando BoxFit.fitWidth
               errorBuilder: (context, error, stackTrace) {
                 return Container(
-                  height: 150,
+                  height: imageHeight, // Altura responsiva
                   color: Colors.grey[300],
                   child: const Center(
                     child: Icon(Icons.broken_image, size: 50, color: Colors.grey),

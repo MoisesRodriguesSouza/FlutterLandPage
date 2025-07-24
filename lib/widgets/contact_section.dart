@@ -58,7 +58,7 @@ class ContactSection extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.code, color: Colors.blueGrey),
               title: const Text('github.com/seugithub', style: TextStyle(fontSize: 18)),
-              onTap: () => _launchUrl('https://github.com/seugithub'),
+              onTap: () => _launchUrl('https://github.com/MoisesRodriguesSouza'),
             ),
           ],
         ),
