@@ -1,5 +1,7 @@
 // lib/widgets/project_card.dart
 import 'package:flutter/material.dart';
+import 'package:landpageti/models/project.dart'; // Importa o modelo Project
+import 'package:landpageti/screens/project_details_page.dart'; // Importa a nova página de detalhes
 import 'package:url_launcher/url_launcher.dart'; // Para abrir links externos
 
 class ProjectCard extends StatelessWidget {
@@ -7,6 +9,7 @@ class ProjectCard extends StatelessWidget {
   final String description;
   final String imageUrl;
   final String? projectUrl;
+  final Project project; // Adicionado o objeto Project completo
 
   const ProjectCard({
     super.key,
@@ -14,6 +17,7 @@ class ProjectCard extends StatelessWidget {
     required this.description,
     required this.imageUrl,
     this.projectUrl,
+    required this.project, // Requer o objeto Project
   });
 
   // Função auxiliar para lançar URLs
@@ -70,14 +74,21 @@ class ProjectCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 10),
-                if (projectUrl != null)
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: TextButton(
-                      onPressed: () => _launchUrl(projectUrl!),
-                      child: const Text('Ver Projeto'),
-                    ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: TextButton(
+                    onPressed: () {
+                      // Navega para a página de detalhes, passando o objeto Project
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProjectDetailsPage(project: project),
+                        ),
+                      );
+                    },
+                    child: const Text('Ver Detalhes'), // Alterado para "Ver Detalhes"
                   ),
+                ),
               ],
             ),
           ),

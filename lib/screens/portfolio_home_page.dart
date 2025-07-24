@@ -74,15 +74,15 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             ? <Widget>[
                 TextButton(
                   onPressed: () => _scrollToSection(_aboutKey),
-                  child: const Text('Sobre Mim', style: TextStyle(color: Colors.white)),
+                  child: const Text('Sobre Mim', style: TextStyle(color: Color.fromARGB(255, 153, 153, 153))),
                 ),
                 TextButton(
                   onPressed: () => _scrollToSection(_projectsKey),
-                  child: const Text('Meus Trabalhos', style: TextStyle(color: Colors.white)),
+                  child: const Text('Meus Trabalhos', style: TextStyle(color:  Color.fromARGB(255, 153, 153, 153))),
                 ),
                 TextButton(
                   onPressed: () => _scrollToSection(_contactKey),
-                  child: const Text('Contato', style: TextStyle(color: Colors.white)),
+                  child: const Text('Contato', style: TextStyle(color: Color.fromARGB(255, 153, 153, 153))),
                 ),
               ]
             : null,

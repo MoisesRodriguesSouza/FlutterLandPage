@@ -2,9 +2,10 @@
 import 'package:flutter/material.dart';
 
 class HeroSection extends StatelessWidget {
-  final VoidCallback scrollToProjects; // Mantenha o VoidCallback
+  final VoidCallback scrollToProjects;
 
-  const HeroSection({super.key, required this.scrollToProjects}); // Mantenha o construtor
+  // Construtor agora espera scrollToProjects
+  const HeroSection({super.key, required this.scrollToProjects});
 
   @override
   Widget build(BuildContext context) {
