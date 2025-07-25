@@ -30,6 +30,22 @@ A primeira impressão da sua landing page.
 
 ![Primeira Visão da Landing Page](assets/images/landBasica2025/landBasica2025_First_Frame.png)
 
+#### Segunda Visão da Landing Page
+A Segunda impressão da sua landing page.
+![Segunda Visão da Landing Page](assets/images/paginas/2paginas.png)
+
+#### Terceira Visão da Landing Page
+A Terceira impressão da sua landing page.
+![Segunda Visão da Landing Page](assets/images/paginas/3paginas.png)
+
+#### Quarta Visão da Landing Page
+A Quarta impressão da sua landing page.
+![Segunda Visão da Landing Page](assets/images/paginas/4paginas.png)
+
+#### Quinta Visão da Landing Page
+A Quinta impressão da sua landing page.
+![Segunda Visão da Landing Page](assets/images/paginas/5paginas.png)
+
 #### Miniaturas da Landing Page
 Uma galeria de miniaturas mostrando diferentes partes da landing page.
 
