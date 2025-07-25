@@ -27,18 +27,10 @@ class ContactSection extends StatelessWidget {
           children: <Widget>[
             Text(
               'Contato',
-              style: TextStyle(
-                fontSize: screenSize.width > 600 ? 36 : 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueGrey[900],
-              ),
+              style: TextStyle(fontSize: screenSize.width > 600 ? 36 : 28, fontWeight: FontWeight.bold, color: Colors.blueGrey[900]),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Ficarei feliz em conversar sobre novas oportunidades ou projetos. Sinta-se à vontade para entrar em contato através dos seguintes canais:',
-              style: TextStyle(fontSize: 18, height: 1.5),
-              textAlign: TextAlign.center,
-            ),
+            const Text('Ficarei feliz em conversar sobre novas oportunidades ou projetos. Sinta-se à vontade para entrar em contato através dos seguintes canais:', style: TextStyle(fontSize: 18, height: 1.5), textAlign: TextAlign.center),
             const SizedBox(height: 30),
             ListTile(
               leading: const Icon(Icons.email, color: Colors.blueGrey),
@@ -52,8 +44,8 @@ class ContactSection extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.link, color: Colors.blueGrey),
-              title: const Text('linkedin.com/in/seuperfil', style: TextStyle(fontSize: 18)),
-              onTap: () => _launchUrl('https://linkedin.com/in/seuperfil'),
+              title: const Text('linkedin.com/in/moises-rodrigues', style: TextStyle(fontSize: 18)),
+              onTap: () => _launchUrl('https://www.linkedin.com/in/moises-rodrigues-de-souza-4936591b7/'),
             ),
             ListTile(
               leading: const Icon(Icons.code, color: Colors.blueGrey),
