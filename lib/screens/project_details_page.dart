@@ -20,10 +20,7 @@ class ProjectDetailsPage extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(project.name),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: Text(project.name), centerTitle: true),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,16 +32,14 @@ class ProjectDetailsPage extends StatelessWidget {
                 child: Image.asset(
                   project.imageUrl,
                   width: screenSize.width * 0.8, // Imagem maior na página de detalhes
-                  height: screenSize.height * 0.4,
-                  fit: BoxFit.cover,
+                  height: screenSize.height * 0.9,
+                  fit: BoxFit.fitWidth,
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
                       width: screenSize.width * 0.8,
-                      height: screenSize.height * 0.4,
+                      height: screenSize.height * 0.9,
                       color: Colors.grey[300],
-                      child: const Center(
-                        child: Icon(Icons.broken_image, size: 80, color: Colors.grey),
-                      ),
+                      child: const Center(child: Icon(Icons.broken_image, size: 80, color: Colors.grey)),
                     );
                   },
                 ),
@@ -53,11 +48,7 @@ class ProjectDetailsPage extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               project.name,
-              style: TextStyle(
-                fontSize: screenSize.width > 600 ? 40 : 30,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueGrey[900],
-              ),
+              style: TextStyle(fontSize: screenSize.width > 600 ? 40 : 30, fontWeight: FontWeight.bold, color: Colors.blueGrey[900]),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
@@ -77,9 +68,7 @@ class ProjectDetailsPage extends StatelessWidget {
                 label: const Text('Visitar Projeto', style: TextStyle(fontSize: 18)),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                 ),
               ),
             const SizedBox(height: 40),
