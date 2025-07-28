@@ -33,7 +33,7 @@ class ProjectDetailsPage extends StatelessWidget {
                   project.imageUrl,
                   // Tamanho da imagem responsivo: 80% da largura da tela, altura proporcional
                   width: screenSize.width * 0.8,
-                  height: screenSize.height * 0.9,
+                  height: screenSize.height * 0.4,
                   fit: BoxFit.fitWidth, // Usando BoxFit.fitWidth
                   errorBuilder: (context, error, stackTrace) {
                     return Container(

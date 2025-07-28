@@ -27,7 +27,7 @@ class TestimonialsSection extends StatelessWidget {
       author: 'Ana Paula',
       role: 'Gerente de Projetos',
       avatarUrl:
-          '[https://placehold.co/80x80/E0E0E0/000000?text=AP](https://placehold.co/80x80/E0E0E0/000000?text=AP)', // Placeholder
+          'https://placehold.co/80x80/E0E0E0/000000?text=AP', // Placeholder
     ),
     Testimonial(
       quote:
@@ -35,7 +35,7 @@ class TestimonialsSection extends StatelessWidget {
       author: 'Carlos Eduardo',
       role: 'Desenvolvedor Sênior',
       avatarUrl:
-          '[https://placehold.co/80x80/E0E0E0/000000?text=CE](https://placehold.co/80x80/E0E0E0/000000?text=CE)', // Placeholder
+          'https://placehold.co/80x80/E0E0E0/000000?text=CE', // Placeholder
     ),
     Testimonial(
       quote:
@@ -43,7 +43,7 @@ class TestimonialsSection extends StatelessWidget {
       author: 'Mariana Silva',
       role: 'CEO Startup Tech',
       avatarUrl:
-          '[https://placehold.co/80x80/E0E0E0/000000?text=MS](https://placehold.co/80x80/E0E0E0/000000?text=MS)', // Placeholder
+          'https://placehold.co/80x80/E0E0E0/000000?text=MS', // Placeholder
     ),
   ];
 
