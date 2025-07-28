@@ -1,4 +1,4 @@
-// lib/screens/project_details_page.dart (NOVO ARQUIVO)
+// lib/screens/project_details_page.dart
 import 'package:flutter/material.dart';
 import 'package:landpageti/models/project.dart'; // Importa o modelo Project
 import 'package:url_launcher/url_launcher.dart'; // Para abrir links externos
@@ -31,29 +31,44 @@ class ProjectDetailsPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 child: Image.asset(
                   project.imageUrl,
-                  width: screenSize.width * 0.8, // Imagem maior na página de detalhes
+                  // Tamanho da imagem responsivo: 80% da largura da tela, altura proporcional
+                  width: screenSize.width * 0.8,
                   height: screenSize.height * 0.9,
-                  fit: BoxFit.fitWidth,
+                  fit: BoxFit.fitWidth, // Usando BoxFit.fitWidth
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
                       width: screenSize.width * 0.8,
-                      height: screenSize.height * 0.9,
+                      height: screenSize.height * 0.4,
                       color: Colors.grey[300],
-                      child: const Center(child: Icon(Icons.broken_image, size: 80, color: Colors.grey)),
+                      child: const Center(
+                        child: Icon(
+                          Icons.broken_image,
+                          size: 80,
+                          color: Colors.grey,
+                        ),
+                      ),
                     );
                   },
                 ),
               ),
             ),
             const SizedBox(height: 20),
+            // Tamanho da fonte responsivo para o título do projeto
             Text(
               project.name,
-              style: TextStyle(fontSize: screenSize.width > 600 ? 40 : 30, fontWeight: FontWeight.bold, color: Colors.blueGrey[900]),
+              style: TextStyle(
+                fontSize: screenSize.width > 600 ? 40 : 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueGrey[900],
+              ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              // Padding horizontal ajustado para telas menores
+              padding: EdgeInsets.symmetric(
+                horizontal: screenSize.width > 600 ? 40.0 : 20.0,
+              ),
               child: Text(
                 project.longDescription, // Usando a descrição longa
                 style: const TextStyle(fontSize: 18, height: 1.6),
@@ -65,10 +80,18 @@ class ProjectDetailsPage extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () => _launchUrl(project.projectUrl!),
                 icon: const Icon(Icons.link),
-                label: const Text('Visitar Projeto', style: TextStyle(fontSize: 18)),
+                label: const Text(
+                  'Visitar Projeto',
+                  style: TextStyle(fontSize: 18),
+                ),
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                    vertical: 15,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                 ),
               ),
             const SizedBox(height: 40),

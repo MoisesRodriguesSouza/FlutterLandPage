@@ -12,10 +12,13 @@ class AboutSection extends StatelessWidget {
       padding: const EdgeInsets.all(40.0),
       alignment: Alignment.center,
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 800), // Limita a largura do texto
+        constraints: const BoxConstraints(
+          maxWidth: 800,
+        ), // Limita a largura do texto para melhor leitura
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            // Tamanho da fonte responsivo para o título da seção
             Text(
               'Sobre Mim',
               style: TextStyle(
@@ -26,13 +29,13 @@ class AboutSection extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const Text(
-              'Olá! Sou um desenvolvedor de software apaixonado por transformar ideias em soluções digitais inovadoras, escaláveis e eficientes. Com sólida experiência em tecnologias como Flutter, desenvolvimento de APIs RESTful, arquitetura baseada em microsserviços, e integração com bancos de dados relacionais e não-relacionais, busco constantemente evoluir tecnicamente e aplicar as melhores práticas do mercado.',
+              'Olá! Sou um desenvolvedor de software apaixonado por criar soluções inovadoras e eficientes. Com experiência em [linguagens/tecnologias], busco constantemente aprender e aplicar as melhores práticas do mercado. Meu foco é em [sua especialidade, ex: desenvolvimento web, mobile, backend, etc.], e adoro transformar ideias complexas em aplicações funcionais e intuitivas.',
               style: TextStyle(fontSize: 18, height: 1.5),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
             const Text(
-              'Tenho atuado principalmente nas áreas de desenvolvimento mobile e backend, criando aplicações modernas, performáticas e com foco em uma excelente experiência do usuário. Ao longo da minha carreira, participei de projetos desafiadores que me permitiram aprofundar conhecimentos em arquitetura de software, otimização de performance, design de APIs, e boas práticas de UI/UX. Sou movido por aprendizado contínuo, colaboração e a oportunidade de impactar positivamente a vida das pessoas por meio da tecnologia. Estou sempre aberto a novos desafios, trocas de conhecimento e parcerias que impulsionem a inovação.',
+              'Ao longo da minha carreira, tive a oportunidade de trabalhar em projetos desafiadores que me permitiram aprimorar minhas habilidades em [mencione algumas habilidades, ex: arquitetura de software, otimização de performance, UI/UX]. Estou sempre aberto a novas oportunidades e colaborações.',
               style: TextStyle(fontSize: 18, height: 1.5),
               textAlign: TextAlign.center,
             ),

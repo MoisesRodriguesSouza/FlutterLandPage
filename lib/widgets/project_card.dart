@@ -31,15 +31,17 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
-    
-    // Altura da imagem responsiva
-    double imageHeight = 250; // Altura padrão
-    if (screenSize.width < 400) { // Para telas menores (celulares)
-      imageHeight = 60;
-    } else if (screenSize.width > 400) { // Para telas médias (tablets)
-      imageHeight = 250;
-    } else { // Para telas maiores (desktop)
-      imageHeight = 200;
+
+    // Altura da imagem baseada em uma proporção da largura da tela,
+    // com limites para não ficar muito grande ou muito pequena.
+    double imageDisplayHeight =
+        screenSize.width * 0.25; // 25% da largura da tela como altura inicial
+    if (imageDisplayHeight < 120) {
+      // Altura mínima para mobile
+      imageDisplayHeight = 120;
+    } else if (imageDisplayHeight > 200) {
+      // Altura máxima para desktop
+      imageDisplayHeight = 200;
     }
 
     return Card(
@@ -52,15 +54,20 @@ class ProjectCard extends StatelessWidget {
             borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
             child: Image.asset(
               imageUrl,
-              height: imageHeight, // Altura responsiva
+              height:
+                  imageDisplayHeight, // Altura responsiva baseada em porcentagem e limites
               width: double.infinity,
               fit: BoxFit.fitWidth, // Usando BoxFit.fitWidth
               errorBuilder: (context, error, stackTrace) {
                 return Container(
-                  height: imageHeight, // Altura responsiva
+                  height: imageDisplayHeight, // Altura responsiva
                   color: Colors.grey[300],
                   child: const Center(
-                    child: Icon(Icons.broken_image, size: 50, color: Colors.grey),
+                    child: Icon(
+                      Icons.broken_image,
+                      size: 50,
+                      color: Colors.grey,
+                    ),
                   ),
                 );
               },
@@ -94,11 +101,14 @@ class ProjectCard extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProjectDetailsPage(project: project),
+                          builder: (context) =>
+                              ProjectDetailsPage(project: project),
                         ),
                       );
                     },
-                    child: const Text('Ver Detalhes'), // Alterado para "Ver Detalhes"
+                    child: const Text(
+                      'Ver Detalhes',
+                    ), // Alterado para "Ver Detalhes"
                   ),
                 ),
               ],

@@ -19,7 +19,9 @@ class HeroSection extends StatelessWidget {
         children: <Widget>[
           const CircleAvatar(
             radius: 80,
-            backgroundImage: AssetImage('assets/images/file.jpeg'), // Usando a imagem local
+            backgroundImage: AssetImage(
+              'assets/images/file.jpeg',
+            ), // Usando a imagem local
             backgroundColor: Colors.white,
           ),
           const SizedBox(height: 20),
@@ -27,7 +29,9 @@ class HeroSection extends StatelessWidget {
           Text(
             'Olá, eu sou Moisés!',
             style: TextStyle(
-              fontSize: screenSize.width > 600 ? 48 : 32, // Maior em desktop, menor em mobile
+              fontSize: screenSize.width > 600
+                  ? 48
+                  : 32, // Maior em desktop, menor em mobile
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -38,7 +42,9 @@ class HeroSection extends StatelessWidget {
           Text(
             'Engenheiro da Computação | Especialista em Desenvolvedor de Software',
             style: TextStyle(
-              fontSize: screenSize.width > 600 ? 24 : 18, // Maior em desktop, menor em mobile
+              fontSize: screenSize.width > 600
+                  ? 24
+                  : 18, // Maior em desktop, menor em mobile
               color: Colors.white70,
             ),
             textAlign: TextAlign.center,

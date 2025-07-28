@@ -1,9 +1,9 @@
 // lib/models/project.dart
-// NOVO: Adicionado longDescription
 class Project {
   final String name;
   final String description;
-  final String longDescription; // Descrição mais detalhada para a página de detalhes
+  final String
+  longDescription; // Descrição mais detalhada para a página de detalhes
   final String imageUrl;
   final String? projectUrl;
 
